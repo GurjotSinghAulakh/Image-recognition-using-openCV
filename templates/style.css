@@ -1,0 +1,64 @@
+.file {
+    position: relative;
+    display: inline-block;
+    background-color: #7dffa7;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+form > input[type='file'] {
+    display: none;
+}
+
+.button-inner {
+    position: relative;
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    z-index: 99;
+    font-family: 'Poppins', sans-serif;
+}
+
+.file:hover .button-inner {
+    animation: start .25s forwards,
+    end .25s .25s forwards;
+    cursor: pointer;
+}
+
+.file::before,
+.file::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffc57a;
+    width: 100%;
+    height: 100%;
+}
+
+.file::before {
+    transform: translateY(100%);
+}
+
+.file:hover::before {
+    transform: translateY(0);
+    transition: transform .25s;
+}
+
+.file::after {
+    transform: translateY(-100%);
+    transition: transform .25s;
+}
+
+.file:hover::after {
+    transform: translateY(0);
+    transition-delay: .25s;
+}
+
+i {
+    margin-left: 5px;
+    font-size: 20px;
+}

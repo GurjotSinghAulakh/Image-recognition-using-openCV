@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Upload File Button</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class='file' onclick="location.herf='{% url 'script' %}'">
+        {% if data %}
+
+        {{data}}
+
+        {% endif %}
+
+        <form action="/result" method="post">
+            <label for='input-file' class="button-inner">
+                Upload File
+                <i class="ri-upload-cloud-2-fill"></i>
+            </label>
+            <input id='input-file' type='file' />
+        </form>
+    </button>
+</body>
+</html>
